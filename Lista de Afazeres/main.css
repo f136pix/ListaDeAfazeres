@@ -1,0 +1,171 @@
+/*Declarando variaveis CSS */
+
+:root {
+    --escuro: #374151;
+    --maisEscuro: #1F2937;
+    --preto: #111827;
+    --claro: #EEE;
+    --cinza: #6B7280;
+    --rosa: #EC4899;
+    --roxo: #8B5Cf6;
+    --carmesim:#dc143c;
+}
+
+
+* {
+    margin: 0;
+	box-sizing: border-box;
+	font-family: "Fira sans", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: white;
+    background: var(--escuro);
+    
+}
+
+header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--cinza);
+    margin-bottom: 1rem;
+}
+
+#form-de-tarefas {
+    display: flex;
+    
+}
+
+/*Retirando a estilização padrão */
+
+input, button {
+    appearence: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#input-form {
+    flex: 1 1 0%;
+    background-color: var(--maisEscuro);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--claro);
+    font-size: 1.25rem;
+}
+
+/*Alterando a fonte do placeholder*/
+
+#input-form::placeholder {
+    color: var(--cinza)
+}
+
+/*Grandiente no Botão enviar*/
+
+#enviar-form {
+    color: var(--rosa);
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--rosa), var(--roxo));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#enviar-form:hover {
+    opacity : 0.8
+}
+
+#enviar-form:active {
+    opacity : 0.6;
+}
+
+main {
+    flex: 1 1 0%;
+    max-width : 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.lista-de-tarefas{
+    padding: 1rem;
+}
+
+.lista-de-tarefas h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--cinza);
+    margin-bottom: 1rem;
+}
+
+.tarefa{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--preto);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tarefa .conteudo {
+        flex: 1 1 0%;
+
+}
+
+.tarefa .conteudo .texto {
+    color: var(--claro);
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s
+
+}
+
+.tarefa .conteudo .texto:not(:read-only){
+    color: var(--rosa);
+}
+
+.tarefa .acoes {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.tarefa .acoes button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.tarefa .acoes button:hover {
+    opacity: 0.8;
+}
+
+.tarefa .acoes button:active {
+    opacity: 0.6
+}
+
+.tarefa .editar{
+    background-image: linear-gradient(to right, var(--rosa), var(--roxo));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tarefa .deletar{
+    color: var(--carmesim)
+    
+}
